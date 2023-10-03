@@ -47,12 +47,8 @@ public class Empleado {
 	 * 1 Test con horas negativas
 	 * 
 	 * Con el valor de nominaBruta (2100 - 2500)
-	 * 1 Test con valor negativo
 	 * 1 Test con valor menor a 2100
 	 * 1 Test con mediana
 	 * 1 Test con valor mayor a 2500
-	 * 
-	 * 
-	 * 
 	 */
 }
