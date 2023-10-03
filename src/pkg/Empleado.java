@@ -16,11 +16,11 @@ public class Empleado {
 			salario_base = 2500f;
 		}
 		
-		if (1000 >= ventasMes && ventasMes < 1500) {
-			primas = 100f;
-		}
-		else if(1500 <= ventasMes) {
+		if(ventasMes >= 1500) {
 			primas = 200f;
+		}
+		else if (ventasMes >= 1000) {
+			primas = 100f;
 		}
 		
 		extras = horasExtra * 30;
