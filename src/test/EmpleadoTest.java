@@ -25,15 +25,18 @@ class EmpleadoTest {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
+	
+	@Test
 	void testCalculoNominaBruta_Encargado() {
 		fail("Not yet implemented");
 	}	
 	
+	@Test
 	void testCalculoNominaBruta_Vendedor() {
 		fail("Not yet implemented");
 	}	
 	
+	@Test
 	void testCalculoNominaBruta_Otro() {
 		fail("Not yet implemented");
 	}	
@@ -42,23 +45,28 @@ class EmpleadoTest {
 	void testCalculoNominaBruta_VentaMesNegativa() {
 		fail("Not yet implemented");
 	}
-
+	
+	@Test
 	void testCalculoNominaBruta_Menor1000() {
 		fail("Not yet implemented");
 	}	
 	
+	@Test
 	void testCalculoNominaBruta_Entre1000y1500() {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testCalculoNominaBruta_Mayor1500() {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testCalculoNominaBruta_HorasPositivas() {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testCalculoNominaBruta_HorasNegativas() {
 		fail("Not yet implemented");
 	}
@@ -68,14 +76,17 @@ class EmpleadoTest {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testCalculoNominaNeta_Menor2100() {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testCalculoNominaNeta_Entre2100y2500() {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testCalculoNominaNeta_Mayor2500() {
 		fail("Not yet implemented");
 	}
