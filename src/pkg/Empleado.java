@@ -27,4 +27,8 @@ public class Empleado {
 		
 		return salario_base + primas + extras;
 	}
+	
+	float calculoNominaNeta(float nominaBruta) {
+		return 0;
+	}
 }
