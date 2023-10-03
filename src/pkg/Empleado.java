@@ -6,9 +6,9 @@ enum TipoEmpleado {
 }
 
 public class Empleado {
-	float salario_base, primas, extras;
+	public float salario_base, primas, extras;
 	
-	float calculoNominaBruta(TipoEmpleado tipo, float ventasMes, float horasExtra) {
+	public float calculoNominaBruta(TipoEmpleado tipo, float ventasMes, float horasExtra) {
 		
 		if (tipo == TipoEmpleado.Vendedor) {
 			salario_base = 2000f;
@@ -28,7 +28,7 @@ public class Empleado {
 		return salario_base + primas + extras;
 	}
 	
-	float calculoNominaNeta(float nominaBruta) {
+	public float calculoNominaNeta(float nominaBruta) {
 		return 0;
 	}
 }
