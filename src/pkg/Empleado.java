@@ -7,10 +7,6 @@ enum TipoEmpleado {
 public class Empleado {
 	public float salario_base, primas, extras, retencion;
 	
-	public Empleado(float salario_base) {
-		this.salario_base = salario_base;
-	}
-	
 	public float calculoNominaBruta(TipoEmpleado tipo, float ventasMes, float horasExtra) {
 
 		if (tipo == TipoEmpleado.Vendedor) {
