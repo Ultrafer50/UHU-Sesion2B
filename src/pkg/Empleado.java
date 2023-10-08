@@ -41,25 +41,4 @@ public class Empleado {
 		return nominaBruta * (1 - retencion);
 	}
 	
-	/*
-	 * Testear:
-	 * 1 Test Encargado
-	 * 1 Test Vendedor
-	 * 1 Test Otro
-	 * 
-	 * Con el rango de 1000 y 1500:
-	 * 1 Test con la mediana:
-	 * 1 Test con valor menor a 1000
-	 * 1 Test con valor mayor a 1500
-	 * 1 Test con valor negativo
-	 * 
-	 * Con las horas extras
-	 * 1 Test con horas positivas
-	 * 1 Test con horas negativas
-	 * 
-	 * Con el valor de nominaBruta (2100 - 2500)
-	 * 1 Test con valor menor a 2100
-	 * 1 Test con mediana
-	 * 1 Test con valor mayor a 2500
-	 */
 }
