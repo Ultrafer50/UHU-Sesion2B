@@ -8,87 +8,134 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class EmpleadoTest {
+import pkg.Empleado;
+import pkg.TipoEmpleado;
 
+class EmpleadoTest {
+	
+	private float ventasMes, horasExtra, expected, actual;
+	private Empleado empleado;
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		System.out.println("Before All");
 	}
 
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
+		System.out.println("After All");
 	}
 
 	@BeforeEach
 	void setUp() throws Exception {
+		System.out.println("Before Each");
+		empleado = new Empleado();
+		ventasMes = 1450f;
+		horasExtra = 2;
+		
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
+		System.out.println("After each");
 	}
 	
 	@Test
 	void testCalculoNominaBruta_Encargado() {
-		fail("Not yet implemented");
+		expected = 2660f;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}	
 	
 	@Test
 	void testCalculoNominaBruta_Vendedor() {
-		fail("Not yet implemented");
+		expected = 2160f;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Vendedor, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}	
 	
 	@Test
 	void testCalculoNominaBruta_Otro() {
-		fail("Not yet implemented");
+		expected = 0;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Otro, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}	
 	
 	@Test
 	void testCalculoNominaBruta_VentaMesNegativa() {
-		fail("Not yet implemented");
+		expected = 0;
+		ventasMes = -5;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBruta_Menor1000() {
-		fail("Not yet implemented");
+		expected = 2560f;
+		ventasMes = 500;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}	
 	
 	@Test
 	void testCalculoNominaBruta_Entre1000y1500() {
-		fail("Not yet implemented");
+		expected = 2660f;
+		ventasMes = 1250f;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBruta_Mayor1500() {
-		fail("Not yet implemented");
+		expected = 2760f;
+		ventasMes = 1600;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBruta_HorasPositivas() {
-		fail("Not yet implemented");
+		expected = 2690f;
+		horasExtra = 3;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBruta_HorasNegativas() {
-		fail("Not yet implemented");
+		expected = 0;
+		horasExtra = -10;
+		actual = empleado.calculoNominaBruta(TipoEmpleado.Encargado, ventasMes, horasExtra);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaNeta_Negativa() {
-		fail("Not yet implemented");
+		expected = -500;
+		float nominaNeta = -500;
+		actual = empleado.calculoNominaNeta(nominaNeta);
 	}
 	
 	@Test
 	void testCalculoNominaNeta_Menor2100() {
-		fail("Not yet implemented");
+		expected = 1500;
+		float nominaNeta = 1500;
+		actual = empleado.calculoNominaNeta(nominaNeta);
+		
 	}
 	
 	@Test
 	void testCalculoNominaNeta_Entre2100y2500() {
-		fail("Not yet implemented");
+		expected = 1725;
+		float nominaNeta = 2300;
+		actual = empleado.calculoNominaNeta(nominaNeta);
 	}
 	
 	@Test
 	void testCalculoNominaNeta_Mayor2500() {
-		fail("Not yet implemented");
+		expected = 2184;
+		float nominaNeta = 2800;
+		actual = empleado.calculoNominaNeta(nominaNeta);
 	}
 
 }
